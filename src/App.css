@@ -1,12 +1,17 @@
+:root {
+  --main-color: #1d3045;
+  --background-color: #e3e8f2;
+}
+
 .App {
-  background-color: #e3e8f2;
+  background-color: var(--background-color);
   padding-top: 50px;
 }
 .Weather {
   max-width: 680px;
   margin: 0 auto;
   color: #fff;
-  background-color: #1d3045;
+  background-color: var(--main-color);
   padding: 20px 30px;
   border-radius: 20px;
 }
@@ -29,8 +34,25 @@
   border-radius: 10px;
   font-size: 16px;
 }
+.Weather form {
+  position: relative;
+}
 .Weather form input {
   border: 2px solid #ced4da;
-  border-radius: 5px;
-  padding: 0.375rem 0.75rem;
+  border-radius: 20px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.Weather form input:focus {
+  outline: none;
+}
+
+.Weather form button {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  color: var(--main-color);
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-size: 18px;
 }

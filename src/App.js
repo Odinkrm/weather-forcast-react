@@ -5,9 +5,9 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Ankara" />
 
-        <footer className="text-center mt-2">
+        <footer className="text-center mt-2 text-muted">
           This project was coded by Asal Karimi and is{" "}
           <a
             href="https://github.com/Odinkrm/weather-forcast-react"
