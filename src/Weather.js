@@ -1,7 +1,8 @@
-import React, { useState, useTransition } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import ReactAnimatedWeather from "react-animated-weather";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, SetWeatherData] = useState({ loaded: false });
@@ -10,6 +11,7 @@ export default function Weather(props) {
     SetWeatherData({
       loaded: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
       wind: Math.round((response.data.wind.speed * 18) / 5),
       humidity: response.data.main.humidity,
@@ -19,7 +21,7 @@ export default function Weather(props) {
     });
   }
 
-  const apiKey = "c77c0f857560425c32ee92917087a412";
+  const apiKey = "524e8f11afa775e2251f3e8b9020cadd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
@@ -39,8 +41,10 @@ export default function Weather(props) {
           </form>
         </div>
         <h1>{weatherData.city}</h1>
-        <h3>Sunday, 10:31</h3>
-        <div className="text-center mb-5 mt-2">
+        <h3>
+          <FormattedDate date={weatherData.date} />
+        </h3>
+        <div className="text-center mb-5">
           <img alt={weatherData.description} src={weatherData.iconUrl} />
           <h2>{weatherData.temperature}℃</h2>
           <h3 className="text-capitalize">{weatherData.description}</h3>

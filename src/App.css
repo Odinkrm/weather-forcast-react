@@ -6,6 +6,7 @@
 .App {
   background-color: var(--background-color);
   padding-top: 50px;
+  height: 100vh;
 }
 .Weather {
   max-width: 680px;
