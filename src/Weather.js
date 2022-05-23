@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import "./App.css";
 import axios from "axios";
+import DisplayWeatherInfo from "./DisplayWeatherInfo";
 import ReactAnimatedWeather from "react-animated-weather";
-import FormattedDate from "./FormattedDate";
+import "./App.css";
 
-export default function Weather(props) {
-  const [weatherData, SetWeatherData] = useState({ loaded: false });
+export default function Weather() {
+  const [weatherData, SetWeatherData] = useState({
+    loaded: false,
+    city: "Istanbul",
+  });
 
   function handleResponse(response) {
     SetWeatherData({
@@ -21,8 +24,8 @@ export default function Weather(props) {
     });
   }
 
-  const apiKey = "524e8f11afa775e2251f3e8b9020cadd";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+  const apiKey = "c77c0f857560425c32ee92917087a412";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${weatherData.city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 
   if (weatherData.loaded) {
@@ -40,27 +43,7 @@ export default function Weather(props) {
             </button>
           </form>
         </div>
-        <h1>{weatherData.city}</h1>
-        <h3>
-          <FormattedDate date={weatherData.date} />
-        </h3>
-        <div className="text-center mb-5">
-          <img alt={weatherData.description} src={weatherData.iconUrl} />
-          <h2>{weatherData.temperature}℃</h2>
-          <h3 className="text-capitalize">{weatherData.description}</h3>
-        </div>
-        <ul className="d-flex text-center">
-          <li className="col-4">
-            <i class="fa-solid fa-wind" /> {weatherData.wind} km/hr
-          </li>
-          <li className="col-4">
-            <i class="fa-solid fa-droplet" /> {weatherData.humidity}%
-          </li>
-          <li className="col-4">
-            <i class="fa-solid fa-temperature-half" />
-            {weatherData.realFeel}℃
-          </li>
-        </ul>
+        <DisplayWeatherInfo data={weatherData} />
         <hr />
       </div>
     );

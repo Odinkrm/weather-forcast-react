@@ -16,25 +16,6 @@
   padding: 20px 30px;
   border-radius: 20px;
 }
-.Weather h1 {
-  font-size: 36px;
-  font-weight: 500;
-}
-.Weather h2 {
-  font-size: 32px;
-}
-.Weather h3 {
-  font-size: 20px;
-  font-weight: 100;
-}
-.Weather ul {
-  list-style: none;
-  margin: 10px 40px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 16px;
-}
 .Weather form {
   position: relative;
 }
@@ -56,4 +37,23 @@
   background-color: rgba(255, 255, 255, 0);
   border: none;
   font-size: 18px;
+}
+.DisplayWeatherInfo h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.DisplayWeatherInfo h2 {
+  font-size: 32px;
+}
+.DisplayWeatherInfo h3 {
+  font-size: 20px;
+  font-weight: 100;
+}
+.DisplayWeatherInfo ul {
+  list-style: none;
+  margin: 10px 40px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
 }
