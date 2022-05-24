@@ -8,15 +8,22 @@ export default function App() {
         <Weather />
 
         <footer className="text-center mt-2 text-muted">
-          This project was coded by Asal Karimi and is{" "}
+          This project was coded by Asal Karimi and is open-sourced on{" "}
           <a
             href="https://github.com/Odinkrm/weather-forcast-react"
             target="_blank"
             rel="noreferrer"
           >
-            open-sourced on GitHub
+            GitHub
           </a>{" "}
-          and hosted on Netlify
+          and hosted on{" "}
+          <a
+            href="https://weather-forcast-react-app.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
+          </a>
         </footer>
       </div>
     </div>

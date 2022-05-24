@@ -57,3 +57,11 @@
   border-radius: 10px;
   font-size: 16px;
 }
+.DisplayWeatherInfo h2 .unit {
+  font-size: 18px;
+  position: absolute;
+}
+.DisplayWeatherInfo ul li .unit {
+  font-size: 12px;
+  position: absolute;
+}

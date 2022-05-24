@@ -16,7 +16,10 @@ export default function DisplayWeatherInfo(props) {
           alt={props.data.description}
           size={128}
         />
-        <h2>{props.data.temperature}℃</h2>
+        <h2>
+          {props.data.temperature}
+          <span className="unit">℃</span>
+        </h2>
         <h3 className="text-capitalize">{props.data.description}</h3>
       </div>
       <ul className="d-flex text-center">
@@ -28,7 +31,8 @@ export default function DisplayWeatherInfo(props) {
         </li>
         <li className="col-4">
           <i class="fa-solid fa-temperature-half" />
-          {props.data.realFeel}℃
+          {props.data.realFeel}
+          <span className="unit">℃</span>
         </li>
       </ul>
     </div>
