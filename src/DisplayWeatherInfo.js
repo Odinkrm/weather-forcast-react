@@ -5,25 +5,25 @@ import "./App.css";
 export default function DisplayWeatherInfo(props) {
   return (
     <div className="DisplayWeatherInfo">
-      <h1>{props.city}</h1>
+      <h1>{props.data.city}</h1>
       <h3>
-        <FormattedDate date={props.date} />
+        <FormattedDate date={props.data.date} />
       </h3>
       <div className="text-center mb-5">
-        <img alt={props.description} src={props.iconUrl} />
-        <h2>{props.temperature}℃</h2>
-        <h3 className="text-capitalize">{props.description}</h3>
+        <img alt={props.data.description} src={props.data.iconUrl} />
+        <h2>{props.data.temperature}℃</h2>
+        <h3 className="text-capitalize">{props.data.description}</h3>
       </div>
       <ul className="d-flex text-center">
         <li className="col-4">
-          <i class="fa-solid fa-wind" /> {props.wind} km/hr
+          <i class="fa-solid fa-wind" /> {props.data.wind} km/hr
         </li>
         <li className="col-4">
-          <i class="fa-solid fa-droplet" /> {props.humidity}%
+          <i class="fa-solid fa-droplet" /> {props.data.humidity}%
         </li>
         <li className="col-4">
           <i class="fa-solid fa-temperature-half" />
-          {props.realFeel}℃
+          {props.data.realFeel}℃
         </li>
       </ul>
     </div>
