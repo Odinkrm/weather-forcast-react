@@ -17,7 +17,7 @@ export default function Weather() {
       wind: Math.round((response.data.wind.speed * 18) / 5),
       humidity: response.data.main.humidity,
       realFeel: Math.round(response.data.main.feels_like),
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      iconCode: response.data.weather[0].icon,
       description: response.data.weather[0].description,
     });
   }
