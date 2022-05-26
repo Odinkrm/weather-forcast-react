@@ -45,7 +45,10 @@
 .DisplayWeatherInfo h2 {
   font-size: 32px;
 }
-.DisplayWeatherInfo h3 {
+.DisplayWeatherInfo h3,
+.forecastDay,
+.highestTemp,
+.lowestTemp {
   font-size: 20px;
   font-weight: 100;
 }

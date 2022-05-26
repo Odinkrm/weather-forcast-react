@@ -30,8 +30,7 @@ export default function DisplayWeatherInfo(props) {
           <i class="fa-solid fa-droplet" /> {props.data.humidity}%
         </li>
         <li className="col-4">
-          <i class="fa-solid fa-temperature-half" />
-          {props.data.realFeel}
+          <i class="fa-solid fa-temperature-half" /> {props.data.realFeel}
           <span className="unit">℃</span>
         </li>
       </ul>
