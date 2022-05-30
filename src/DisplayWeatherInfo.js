@@ -23,13 +23,13 @@ export default function DisplayWeatherInfo(props) {
         <h3 className="text-capitalize">{props.data.description}</h3>
       </div>
       <ul className="d-flex text-center">
-        <li className="col-4">
+        <li className="col">
           <i class="fa-solid fa-wind" /> {props.data.wind} km/hr
         </li>
-        <li className="col-4">
+        <li className="col">
           <i class="fa-solid fa-droplet" /> {props.data.humidity}%
         </li>
-        <li className="col-4">
+        <li className="col">
           <i class="fa-solid fa-temperature-half" /> {props.data.realFeel}
           <span className="unit">℃</span>
         </li>

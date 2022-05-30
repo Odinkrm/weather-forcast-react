@@ -7,7 +7,7 @@ export default function App() {
       <div className="container">
         <Weather />
 
-        <footer className="text-center mt-2 text-muted">
+        <footer className="text-center mt-4 text-secondary">
           This project was coded by Asal Karimi and is open-sourced on{" "}
           <a
             href="https://github.com/Odinkrm/weather-forcast-react"

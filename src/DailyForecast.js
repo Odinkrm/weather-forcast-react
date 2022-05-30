@@ -13,15 +13,14 @@ export default function DailyForecast(props) {
   }
 
   return (
-    <div className="text-center">
-      <div className="forecastDay">{formatDay()}</div>
-      <WeatherIcon iconCode={props.data.weather[0].icon} size={32} />
-      <div className="forecastTemp">
-        <span className="highestTemp">{Math.round(props.data.temp.max)}°</span>
-        <span className="lowestTemp text-muted">
-          {" "}
-          {Math.round(props.data.temp.min)}°
+    <div className="WeatherForecastItem text-center">
+      <div className="forecastDay mb-3">{formatDay()}</div>
+      <WeatherIcon iconCode={props.data.weather[0].icon} size={34} />
+      <div className="forecastTemp mt-3">
+        <span className="highestTemp me-2">
+          {Math.round(props.data.temp.max)}°
         </span>
+        <span className="lowestTemp"> {Math.round(props.data.temp.min)}°</span>
       </div>
     </div>
   );

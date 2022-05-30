@@ -1,11 +1,11 @@
 :root {
-  --main-color: #1d3045;
+  --main-color: #3c628c;
   --background-color: #e3e8f2;
 }
 
 .App {
   background-color: var(--background-color);
-  padding-top: 50px;
+  padding-top: 20px;
   height: 100vh;
 }
 .Weather {
@@ -45,26 +45,41 @@
 .DisplayWeatherInfo h2 {
   font-size: 32px;
 }
-.DisplayWeatherInfo h3,
-.forecastDay,
-.highestTemp,
-.lowestTemp {
+.DisplayWeatherInfo h2 .unit {
+  font-size: 18px;
+  position: absolute;
+}
+.DisplayWeatherInfo h3 {
   font-size: 20px;
   font-weight: 100;
 }
 .DisplayWeatherInfo ul {
   list-style: none;
-  margin: 10px 40px;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 0 60px;
   padding: 20px;
-  border-radius: 10px;
-  font-size: 16px;
-}
-.DisplayWeatherInfo h2 .unit {
   font-size: 18px;
-  position: absolute;
 }
 .DisplayWeatherInfo ul li .unit {
   font-size: 12px;
   position: absolute;
+}
+.WeatherForecast {
+  margin: 20px;
+}
+.WeatherForecastItem {
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.forecastDay {
+  font-size: 20px;
+  font-weight: 500;
+}
+.highestTemp,
+.lowestTemp {
+  font-size: 18px;
+  font-weight: 100;
+}
+.lowestTemp {
+  opacity: 0.5;
 }

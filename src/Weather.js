@@ -60,7 +60,7 @@ export default function Weather() {
     search();
     return (
       <div className="d-flex justify-content-center align-items-center">
-        <ReactAnimatedWeather icon="WIND" color="#1d3045" animate={true} />
+        <ReactAnimatedWeather icon="WIND" color="#3c628c" animate={true} />
       </div>
     );
   }
