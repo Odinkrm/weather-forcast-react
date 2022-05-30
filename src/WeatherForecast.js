@@ -6,9 +6,6 @@ import "./App.css";
 export default function WeatherForecast(props) {
   const [forcastData, SetForcastData] = useState({ loaded: false });
 
-  let longitude = props.cordinates.lon;
-  let latitude = props.cordinates.lat;
-
   function handleResponse(response) {
     SetForcastData({
       loaded: true,
@@ -22,9 +19,6 @@ export default function WeatherForecast(props) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[props.getDay()];
   }
-  const apiKey = "524e8f11afa775e2251f3e8b9020cadd";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
 
   if (forcastData.loaded) {
     return (
@@ -43,6 +37,12 @@ export default function WeatherForecast(props) {
       </div>
     );
   } else {
+    let longitude = props.cordinates.lon;
+    let latitude = props.cordinates.lat;
+    let apiKey = "524e8f11afa775e2251f3e8b9020cadd";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+
     return null;
   }
 }
