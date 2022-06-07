@@ -53,7 +53,7 @@ export default function Weather() {
         </div>
         <DisplayWeatherInfo data={weatherData} />
         <hr />
-        <WeatherForecast cordinates={weatherData.cords} />
+        <WeatherForecast coordinates={weatherData.cords} />
       </div>
     );
   } else {
